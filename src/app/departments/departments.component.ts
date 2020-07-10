@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Department, DepartmentService} from './department.service';
 
 @Component({
   selector: 'app-departments',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./departments.component.css']
 })
 export class DepartmentsComponent implements OnInit {
+  departments: Promise<Department[]>;
 
-  constructor() { }
+  constructor(private departmentService: DepartmentService) {
+    this.departments = this.departmentService.getDepartments();
+  }
 
   ngOnInit(): void {
   }
