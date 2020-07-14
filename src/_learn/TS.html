@@ -1,0 +1,22 @@
+ TypeScript was created by Microsoft when they wanted to created something with component-based
+architecture, but there were no features available in javascript to support their dream, so
+ they create a TypeScript that has strong typing, some of the class features, some new structures.
+ So when you write your code in typescript it transpile into whichever version of javascript
+
+https://www.typescriptlang.org/play/
+
+by TS:                                          by JS:
+ enum list { tomato, potato, onion };             "use strict";
+                                                   var list;
+                                                    (function (list) {
+                                                      list[list["tomato"] = 0] = "tomato";
+                                                      list[list["potato"] = 1] = "potato";
+                                                      list[list["onion"] = 2] = "onion";
+                                                    })(list || (list = {}));
+ ;
+TS also provide:
+interface Profile {
+        name: string;
+        id: number;
+ }
+
