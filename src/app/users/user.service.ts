@@ -22,8 +22,12 @@ export class UserService implements OnDestroy {
   getUsers(): Observable<User[]>{
     return this.http.get<User[]>(this.usersUrl);
   }
-  // getUser(id: number): User{
-  //   const url = `${this.usersUrl}/${id}`;
-  //   return this.http.get<User>(url);
-  // }
+  getUser(id: number): Observable<User> {
+    const url = `${this.usersUrl}/${id}`;
+    return this.http.get<User>(url);
+  }
+
+  updateUser(user: User): Observable<any> {
+    return this.http.put(this.usersUrl, user, this.httpOptions);
+  }
 }

@@ -1,0 +1,17 @@
+<div *ngIf="user">
+<p>User {{user.name | uppercase}}</p>
+<div>
+  <label>Name:
+  <input [(ngModel)]="user.name">
+  </label>
+</div>
+<div>
+  <label>Department:
+    <input [(ngModel)]="user.departmentId">
+  </label>
+</div>
+<div>
+  <button (click)="saveChanges()">Save</button>
+  <button (click)="goBack()">Back</button>
+</div>
+</div>

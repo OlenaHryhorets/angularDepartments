@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: DepartmentsComponent
+  },
+  {
+    path: '`${this.department}/?id=${id}`',
+    component: DepartmentsComponent
   }
 ];
 

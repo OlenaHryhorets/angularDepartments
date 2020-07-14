@@ -1,7 +1,7 @@
 <p>Departments list:</p>
 <ul *ngFor="let department of departments | async">
   <li>
-    <a class="dep-block" routerLink="{{department.id}}">
+    <a class="dep-block" routerLink="department{{department.id}}">
       {{department.id}}-{{department.name}}
     </a>
   </li>

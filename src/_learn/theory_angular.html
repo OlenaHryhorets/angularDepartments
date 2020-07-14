@@ -10,3 +10,17 @@ from high-level component to low-level layer
 {{}} interpolation means whatever variable you have inside component (.ts file), you can use it in the
 template
 [ngModel]
+
+Lazy Loading (Angular 4)
+it is a technique that allows you to render components asynchronously when a certain route is activated.
+This can help with the initial loading performance of an angular app
+
+Building with Angular CLI:
+ng new lazy-demo --routing
+
+ng g module lazy --flat
+ng g lazy-parent --module lazy
+ng g lazy-child --module lazy
+(this will automatically assign these components to the lazy module)
+
+

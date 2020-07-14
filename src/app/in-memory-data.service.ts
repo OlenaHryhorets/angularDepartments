@@ -6,19 +6,19 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const humans = [
+    const users = [
       { id: 1, name: 'Helen', departmentId: 1 },
-      { id: 2, name: 'Lena', departmentId: 2 },
-      { id: 3, name: 'Dmytro', departmentId: 1 },
+      { id: 2, name: 'Dima', departmentId: 2 },
+      { id: 3, name: 'Luke', departmentId: 1 },
       { id: 4, name: 'Tomas', departmentId: 3 },
       { id: 5, name: 'Mircha', departmentId: 3 },
-      { id: 6, name: 'Ricky', departmentId: 1 },
-      { id: 7, name: 'Dima', departmentId: 2 },
+      { id: 6, name: 'Ricky', departmentId: 4 },
+      { id: 7, name: 'Dan', departmentId: 2 },
       { id: 8, name: 'Mila', departmentId: 1 },
       { id: 9, name: 'Sam', departmentId: 3 },
       { id: 10, name: 'Tim', departmentId: 2 }
     ];
-    return {humans};
+    return {users};
   }
 
   // Overrides the genId method to ensure that a human always has an id.
